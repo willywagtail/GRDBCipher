@@ -1,0 +1,15 @@
+{
+  "originHash" : "9f748f14934adbba11082c3e931167b2b0773aaaef53ae7dd02acef2f517898a",
+  "pins" : [
+    {
+      "identity" : "sqlcipher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/willywagtail/SQLCipher",
+      "state" : {
+        "branch" : "test2",
+        "revision" : "c95fb3f71ac838630d0e57d9fed572fbe0631bba"
+      }
+    }
+  ],
+  "version" : 3
+}
