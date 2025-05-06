@@ -50,8 +50,8 @@ let package = Package(
     ],
     products: [
         .library(name: "GRDBSQLite", targets: ["GRDBSQLite"]),
-        .library(name: "GRDB", targets: ["GRDB"]),
-        .library(name: "GRDB-dynamic", type: .dynamic, targets: ["GRDB"]),
+        .library(name: "GRDBCipher", targets: ["GRDBCipher"]),
+        .library(name: "GRDB-dynamic", type: .dynamic, targets: ["GRDBCipher"]),
     ],
     dependencies: dependencies,
     targets: [
@@ -59,7 +59,7 @@ let package = Package(
             name: "GRDBSQLite",
             providers: [.apt(["libsqlite3-dev"])]),
         .target(
-            name: "GRDB",
+            name: "GRDBCipher",
             dependencies: [
                 "GRDBSQLite",
                 .product(name: "SQLCipher", package: "SQLCipher")
@@ -70,7 +70,7 @@ let package = Package(
             swiftSettings: swiftSettings),
         .testTarget(
             name: "GRDBTests",
-            dependencies: ["GRDB"],
+            dependencies: ["GRDBCipher"],
             path: "Tests",
             exclude: [
                 "CocoaPods",
