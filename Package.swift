@@ -40,7 +40,7 @@ if ProcessInfo.processInfo.environment["SPI_BUILDER"] == "1" {
 }
 
 let package = Package(
-    name: "GRDB",
+    name: "GRDBCipher",
     defaultLocalization: "en", // for tests
     platforms: [
         .iOS(.v13),
